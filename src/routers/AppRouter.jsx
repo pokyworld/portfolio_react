@@ -15,7 +15,7 @@ export class AppRouter extends React.Component {
     render() {
         console.log("This is the process.env", process.env.PUBLIC_URL);
         return (
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router basename={process.env.PUBLIC_URL + '/'}>
                 <Switch>
                     <Route path="/" component={HomePage} exact={true} />
                     <Route path="/home" component={HomePage} />
