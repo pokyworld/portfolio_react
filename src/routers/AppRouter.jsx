@@ -17,6 +17,7 @@ export class AppRouter extends React.Component {
         return (
             <Router>
                 <Switch>
+                    <Route path="" basename={this.props.basename} component={HomePage} exact={true} />
                     <Route path="/" basename={this.props.basename} component={HomePage} exact={true} />
                     <Route path="/home" basename={this.props.basename} component={HomePage} />
                     <Route path="/about" basename={this.props.basename} component={AboutPage} />
