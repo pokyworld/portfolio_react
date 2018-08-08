@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; 
+import { HashRouter as Router, Route, Switch } from "react-router-dom"; 
 
 import HomePage from "../components/HomePage.jsx";
 import AboutPage from "../components/AboutPage.jsx";
@@ -15,7 +15,7 @@ export class AppRouter extends React.Component {
     render() {
         console.log("This is the process.env", process.env.PUBLIC_URL);
         return (
-            <Router basename={process.env.PUBLIC_URL + '/'}>
+            <Router>
                 <Switch>
                     <Route path="/" component={HomePage} exact={true} />
                     <Route path="/home" component={HomePage} />

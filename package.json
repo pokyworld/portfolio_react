@@ -18,6 +18,7 @@
   "scripts": {
     "build": "webpack",
     "serve": "webpack-dev-server",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d public",
     "test": "jest --config=jest.config.json"
   },
