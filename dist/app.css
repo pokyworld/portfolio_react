@@ -74,7 +74,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("/img/portrait.jpg");
+      background: url(/img/portrait.jpg);
       border-radius: 50%;
       border: solid 3px #eece1a; }
 
@@ -107,7 +107,7 @@ body {
   font-family: 'Segoe UI', Geneva, san-serif;
   line-height: 1.5; }
   body > #root > #bg-img {
-    background: url("/img/background.jpg");
+    background: url(/img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body > #root > #bg-img > .app {
@@ -298,7 +298,7 @@ main {
     .menu-branding .portrait {
       width: 150px;
       height: 150px;
-      background: url("/img/portrait_small.jpg"); }
+      background: url(/img/portrait_small.jpg); }
   .about-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
