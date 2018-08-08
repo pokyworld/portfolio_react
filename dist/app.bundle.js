@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "973a82013b5ee57f53df";
+/******/ 	var hotCurrentHash = "c6c94a8bef6c6c457c94";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1662,7 +1662,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _AppRouter = __webpack_require__(/*! ./routers/AppRouter.jsx */ \"./src/routers/AppRouter.jsx\");\n\nvar _AppRouter2 = _interopRequireDefault(_AppRouter);\n\nvar _registerServiceWorker = __webpack_require__(/*! ./registerServiceWorker */ \"./src/registerServiceWorker.js\");\n\nvar _registerServiceWorker2 = _interopRequireDefault(_registerServiceWorker);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar appRoot = document.getElementById('root');\n\nvar render = function render() {\n  return _reactDom2.default.render(_react2.default.createElement(_AppRouter2.default, null), appRoot);\n};\nrender();\n(0, _registerServiceWorker2.default)();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("/* WEBPACK VAR INJECTION */(function(process) {\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _AppRouter = __webpack_require__(/*! ./routers/AppRouter.jsx */ \"./src/routers/AppRouter.jsx\");\n\nvar _AppRouter2 = _interopRequireDefault(_AppRouter);\n\nvar _registerServiceWorker = __webpack_require__(/*! ./registerServiceWorker */ \"./src/registerServiceWorker.js\");\n\nvar _registerServiceWorker2 = _interopRequireDefault(_registerServiceWorker);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar appRoot = document.getElementById('root');\n\nvar render = function render() {\n  return _reactDom2.default.render(_react2.default.createElement(_AppRouter2.default, { basename: process.env.PUBLIC_URL }), appRoot);\n};\nrender();\n(0, _registerServiceWorker2.default)();\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ \"./node_modules/process/browser.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
