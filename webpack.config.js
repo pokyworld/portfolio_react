@@ -2,10 +2,8 @@ const fs = require('fs');
 const path = require("path");
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const publicUrl = (mode !== "production") ? "/" : "https://pokyworld.github.io/portfolio_react";
-const publicUrl = (webpack.mode !== "production") ? "/" : "https://pokyworld.github.io/portfolio_react";
 
-module.exports = (env = {}) => {
+module.exports = (env = {}, argv) => {
     return {
         entry: ["./src/index.js","./src/scss/main.scss"],
         mode: "development",
@@ -59,7 +57,7 @@ module.exports = (env = {}) => {
             new webpack.NoEmitOnErrorsPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
-                  'PUBLIC_URL': `"${publicUrl}"`
+                  'PUBLIC_URL': (argv.mode === "development") ? "/" : "https://pokyworld.github.io/portfolio_react"
                 }
             })
         ],

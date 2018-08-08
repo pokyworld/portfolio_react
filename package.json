@@ -16,10 +16,10 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "dev": "webpack --mode development ",
-    "build": "webpack --mode production",
-    "serve": "webpack-dev-server --mode development",
-    "predeploy": "npm run build --mode production --open --hot",
+    "dev": "webpack --mode=development",
+    "build": "webpack --mode=production",
+    "serve": "webpack-dev-server --mode=development --open --hot",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d public",
     "test": "jest --config=jest.config.json"
   },
