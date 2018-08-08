@@ -1,0 +1,197 @@
+@import "config";
+@import "menu";
+
+* { box-sizing: border-box; }
+html { height: 100%; margin: 0; padding: 0; }
+
+body {
+    height: 100%; margin: 0; padding: 0; 
+    @include homeBackground;
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    font-family: 'Segoe UI', Geneva, san-serif;
+    line-height: 1.5;
+}
+
+// headings
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 4rem;
+    }
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem, 1rem;
+        background: rgba(lighten($primary-color, 5), 0.5);
+    }
+}
+
+a {
+    color:set-text-color($primary-color);
+    text-decoration: none;
+}
+
+header { position: fixed; z-index: 2; width: 100%; }
+.text-secondary { color: $secondary-color; }
+.nowrap { white-space: pre; }
+
+main {
+    padding: 3rem;
+    height: calc(100vh - 36px);
+
+    // height: 100%;
+    overflow: auto;
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+
+    &#home {
+        height: 100vh;
+        overflow: hidden;
+        h1 {
+            margin-top: 22vh;
+        }
+    }
+}
+
+.bio-image { grid-area: bioimage; margin: auto; border-radius: 50%; border: 3px solid $secondary-color; }
+.bio { grid-area: bio; font-size: 1.5rem; }
+.job-1 { grid-area: job1; }
+.job-2 { grid-area: job2; }
+.job-3 { grid-area: job3; }
+.job-4 { grid-area: job4; }
+.job-5 { grid-area: job5; }
+.job-6 { grid-area: job6; }
+
+
+// About Me Page
+.about-info {
+    padding-bottom: 1rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-areas: 
+    'bioimage bio bio' 
+    'job1 job2 job3'
+    'job4 job5 job6';
+    grid-template-columns: repeat(3, 1fr);
+
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 1rem;
+    
+        h3 { color: $secondary-color; }
+        h4 > span.text-right {
+            color: darken(set-text-color($primary-color), 50%);
+        }
+        border-bottom: 3px solid $secondary-color;
+    }
+}
+
+
+// View My Work Page
+.projects-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+
+
+    img {
+        width: 100%;
+        border: 0.3rem solid lighten($primary-color, 30);
+        border-radius: 0.2rem;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+
+// Contact Page
+.contact-info {
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+
+        div {
+            font-size: 2rem;
+            border: 0.2rem solid set-text-color($primary-color);
+            padding: 1.5rem 2.5rem;
+            margin-bottom: 3rem;
+            @include easeOut;
+
+            &:hover {
+                padding: 0.5rem 1.5rem;
+                background: $secondary-color;
+                color: set-text-color($secondary-color);
+                span {
+                    color: set-text-color($secondary-color);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+
+// Buttons
+.btn {
+    display: block;
+    padding: 0.2rem 0.8rem;
+    border: 0;
+    border-radius: 0.2rem;
+    margin-bottom: 0.4rem;
+    text-align:center;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 30);
+    color: set-text-color(darken($primary-color, 30));
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 30);
+    color: set-text-color(lighten($primary-color, 30));
+}
+
+
+// Main Footer
+#main-footer {
+    text-align: center;
+    // margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    background: darken($primary-color, 30);
+    border-top: 0.05rem solid lighten($primary-color, 30);
+    color: set-text-color($primary-color);
+    height: 36px;
+}
+
+
+// last item in file - media queries
+@import "responsive";
