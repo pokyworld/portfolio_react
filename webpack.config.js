@@ -3,7 +3,7 @@ const path = require("path");
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = (env = {}, argv) => {
+module.exports = (env = {}) => {
     return {
         entry: ["./src/index.js","./src/scss/main.scss"],
         mode: "development",
@@ -57,7 +57,7 @@ module.exports = (env = {}, argv) => {
             new webpack.NoEmitOnErrorsPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
-                  'PUBLIC_URL': (argv.mode === "development") ? "/" : "https://pokyworld.github.io/portfolio_react"
+                  'PUBLIC_URL': '"https://pokyworld.github.io/portfolio_react"'
                 }
             })
         ],
