@@ -21,6 +21,7 @@ export class AppRouter extends React.Component {
                     <Route path="/about" component={AboutPage} />
                     <Route path="/work" component={WorkPage} />
                     <Route path="/contact" component={ContactPage} />
+                    <Route component={() => (<div>404 Not found </div>)} />
                 </Switch>
             </BrowserRouter>    
         )
