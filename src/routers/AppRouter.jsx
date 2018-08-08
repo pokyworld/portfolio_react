@@ -14,7 +14,7 @@ export class AppRouter extends React.Component {
 
     render() {
         return (
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route path="/" component={HomePage} exact={true} />
                     <Route path="/home" component={HomePage} />
