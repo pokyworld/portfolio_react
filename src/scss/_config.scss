@@ -3,10 +3,10 @@ $light-theme-text-color: #000;
 $dark-theme-text-color: #fff;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url('~/img/background.jpg');
+$home-image: url(~/img/background.jpg);
 $background-opacity: 0.9;
-$portrait-image: url('~/img/portrait.jpg');
-$portrait-small-image: url('~/img/portrait_small.jpg');
+$portrait-image: url(~/img/portrait.jpg);
+$portrait-small-image: url(~/img/portrait_small.jpg);
 
 .text-right { float: right; padding-right: 1rem; }
 

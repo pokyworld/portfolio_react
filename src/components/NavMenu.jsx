@@ -38,10 +38,10 @@ class NavMenu extends React.Component {
                         <NavLink to="/"><div className="portrait" onClick={this.menuBtnClick}></div></NavLink>
                     </div>
                     <ul className={this.state.showMenu ? 'menu-nav show' : 'menu-nav'}>
-                        <NavLink to="/" activeClassName="current" className={this.state.showMenu ? 'nav-link show' : 'nav-link'} exact={true}><li className="nav-item">Home</li></NavLink>
-                        <NavLink to="/about" activeClassName="current" className={this.state.showMenu ? 'nav-link show' : 'nav-link'}><li className="nav-item">About Me</li></NavLink>
-                        <NavLink to="/work" activeClassName="current" className={this.state.showMenu ? 'nav-link show' : 'nav-link'}><li className="nav-item">My Work</li></NavLink>
-                        <NavLink to="/contact" activeClassName="current" className={this.state.showMenu ? 'nav-link show' : 'nav-link'}><li className="nav-item">How to Contact Me</li></NavLink>
+                        <NavLink to="/" activeClassName="current" className={this.state.showMenu ? 'nav-link show' : 'nav-link'} exact={true} onClick={this.menuBtnClick}><li className="nav-item">Home</li></NavLink>
+                        <NavLink to="/about" activeClassName="current" className={this.state.showMenu ? 'nav-link show' : 'nav-link'} onClick={this.menuBtnClick}><li className="nav-item">About Me</li></NavLink>
+                        <NavLink to="/work" activeClassName="current" className={this.state.showMenu ? 'nav-link show' : 'nav-link'} onClick={this.menuBtnClick}><li className="nav-item">My Work</li></NavLink>
+                        <NavLink to="/contact" activeClassName="current" className={this.state.showMenu ? 'nav-link show' : 'nav-link'} onClick={this.menuBtnClick}><li className="nav-item">How to Contact Me</li></NavLink>
                     </ul>
                 </nav>
             </header>
