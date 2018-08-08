@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom"; 
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; 
 
 import HomePage from "../components/HomePage.jsx";
 import AboutPage from "../components/AboutPage.jsx";
@@ -13,8 +13,9 @@ export class AppRouter extends React.Component {
     };
 
     render() {
+        console.log("This is the process.env", process.env.PUBLIC_URL);
         return (
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route path="/" component={HomePage} exact={true} />
                     <Route path="/home" component={HomePage} />
@@ -23,7 +24,7 @@ export class AppRouter extends React.Component {
                     <Route path="/contact" component={ContactPage} />
                     <Route component={() => (<div>404 Not found </div>)} />
                 </Switch>
-            </BrowserRouter>    
+            </Router>    
         )
     };
 };
