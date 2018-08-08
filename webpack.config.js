@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require("path");
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const publicUrl = "/";
+const publicUrl = "/portfolio_react";
 
 module.exports = (env = {}) => {
     return {
@@ -57,7 +59,7 @@ module.exports = (env = {}) => {
             new webpack.NoEmitOnErrorsPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
-                  'PUBLIC_URL': '"https://pokyworld.github.io/portfolio_react"'
+                  'PUBLIC_URL': `"${publicUrl}"`
                 }
             })
         ],
