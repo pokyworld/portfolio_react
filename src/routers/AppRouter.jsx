@@ -13,14 +13,15 @@ export class AppRouter extends React.Component {
     };
 
     render() {
+        console.log(this.props);
         return (
             <Router>
                 <Switch>
-                    <Route path="/" component={HomePage} exact={true} />
-                    <Route path="/home" component={HomePage} />
-                    <Route path="/about" component={AboutPage} />
-                    <Route path="/work" component={WorkPage} />
-                    <Route path="/contact" component={ContactPage} />
+                    <Route path="/" basename={this.props.basename} component={HomePage} exact={true} />
+                    <Route path="/home" basename={this.props.basename} component={HomePage} />
+                    <Route path="/about" basename={this.props.basename} component={AboutPage} />
+                    <Route path="/work" basename={this.props.basename} component={WorkPage} />
+                    <Route path="/contact" basename={this.props.basename} component={ContactPage} />
                 </Switch>
             </Router>    
         )
