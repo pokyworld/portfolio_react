@@ -2,10 +2,9 @@ const fs = require('fs');
 const path = require("path");
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const publicUrl = "/";
-const publicUrl = "/portfolio_react";
+const publicUrl = "/";
 
-module.exports = (env = {}) => {
+module.exports = (env = {}, process) => {
     return {
         entry: ["./src/index.js","./src/scss/main.scss"],
         mode: "development",
@@ -59,6 +58,7 @@ module.exports = (env = {}) => {
             new webpack.NoEmitOnErrorsPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
+                //   'NODE_ENV': `"${process.env.NODE_ENV}"`,
                   'PUBLIC_URL': `"${publicUrl}"`
                 }
             })

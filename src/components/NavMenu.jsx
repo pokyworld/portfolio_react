@@ -17,7 +17,6 @@ class NavMenu extends React.Component {
     };
 
     toggleMenu() {
-        console.log("Toggled Menu");
         if (!this.state.showMenu) {
             this.setState({showMenu: true});
         } else {

@@ -11,9 +11,7 @@ export class AppRouter extends React.Component {
     constructor(props) {
         super(props);
     };
-    // process.env.PUBLIC_URL = "";
     render() {
-        console.log("This is the process.env", process.env.PUBLIC_URL);
         return (
             <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
